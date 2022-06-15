@@ -28,7 +28,7 @@ flow.capture()
 
 @app.route('/')
 def hello_geek():
-    return '<h1>Hello from Flask & Docker</h2>'
+    return '<h1>Hello from Flask & Docker</h1>'
 
 @app.route('/bytewax')
 async def Run_Bytewax():
