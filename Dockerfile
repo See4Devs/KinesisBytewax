@@ -1,12 +1,11 @@
+
 # syntax=docker/dockerfile:1
+FROM bytewax/bytewax:0.9.0-python3.8
 
-FROM python:3.8-slim-buster
+WORKDIR /bytewax
 
-WORKDIR /python-docker
+RUN /venv/bin/pip install boto3
 
-COPY requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt
+COPY . . 
 
-COPY . .
-
-CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
+RUN ["chmod", "+x", "./entrypoint.sh"]
