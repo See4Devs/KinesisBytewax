@@ -30,8 +30,8 @@ flow.capture()
 stream_name = 'bytewax-cab-trip'
 try:
     kinesis_client =  boto3.client('kinesis',
-                                                        aws_access_key_id=#"YOUR ACCESS KEY",
-                                                        aws_secret_access_key=#"YOU SECRET KEY",
+                                                        aws_access_key_id="YOUR ACCESS KEY",
+                                                        aws_secret_access_key="YOU SECRET KEY",
                                                         region_name='us-east-1')
     #------------------
     # Get the shard ID.
